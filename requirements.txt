@@ -1,3 +1,2 @@
-texttable
 requests
 pandas
