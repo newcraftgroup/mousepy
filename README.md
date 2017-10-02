@@ -26,12 +26,7 @@ A representation of a specific website
 
 #### Code
 ```py
-connection = Mouseflow(
-    user,
-    token
-)
-
-connection.websites("website name")
+connection.websites(name)
 ```
 
 #### Parameters
@@ -68,17 +63,21 @@ connection.websites("website name")
 Returns a list of websites available
 
 ```py
-connection = Mouseflow(
-    user,
-    token
-)
-
 connection.websites()
 ```
 
+### Methods
+
+* ```list()```: Returns a list of dictionaries with information about each available site
+
+#### Methods
 
 
-#### Parameters
+### Recordings
+
+```
+connection.websites(site_name).recordings()
+```
 
 
 ## Examples
@@ -95,7 +94,6 @@ list_of_websites = connection.websites().list()
 ```
 
 ### Selecting a specific site
-After finding out the name of the site you are interested in, you make a connection to a specific site using the following code:
 
 ```python
 connection = Mouseflow(
@@ -103,5 +101,5 @@ connection = Mouseflow(
     token
 )
 
-list_of_websites = connection.websites("website name").list()
+website = connection.websites("website name or id")
 ```

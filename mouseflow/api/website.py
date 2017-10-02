@@ -10,8 +10,8 @@ from mouseflow.api.recordings.recordings import Recordings
 class Website(API):
     ALIGNMENT_CENTER = "Center"
     ALIGNMENT_LEFT = "Left"
-    ALIGNMENT_RIGHT = "RIGHT"
-    ALIGNMENT_FLEXIBLE = "RIGHT"
+    ALIGNMENT_RIGHT = "Right"
+    ALIGNMENT_FLEXIBLE = "Flexible"
 
     STATUS_NOT_INSTALLED = "NotInstalled"
     STATUS_RECORDING = "Recording"
@@ -129,7 +129,7 @@ class Website(API):
         return self.response.get("mergeUrls")
 
     def recordings(self,
-                   id: str = None,
+                   recording_id: str = None,
                    search: str = None,
                    from_date=None,
                    to_date=None,
@@ -141,7 +141,8 @@ class Website(API):
                    meta: bool = False,
                    **kwargs) -> Union[Recordings, Recording]:
         """
-        :param id:
+        Returns Recording if an id is provided otherwise returns Recordings
+        :param recording_id:
         :param search:
         :param from_date:
         :param to_date:
@@ -176,8 +177,8 @@ class Website(API):
         if vars is not None:
             kwargs["vars"] = ",".join(["%s=%s" % (key, value) for (key, value) in vars.items()])
 
-        if id is not None:
-            return Recordings(self, **kwargs).recording(id)
+        if recording_id is not None:
+            return Recordings(self, **kwargs).recording(recording_id)
 
         return Recordings(self, **kwargs)
 
