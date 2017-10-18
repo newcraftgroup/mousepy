@@ -43,6 +43,13 @@ class API:
             value: str = None,
             parent: Union['API', 'Mouseflow'] = None,
             **kwargs):
+        """
+        Base API communication class.
+        :param command:
+        :param value:
+        :param parent:
+        :param kwargs:
+        """
         self.init = False
 
         if isinstance(command, str):
@@ -68,10 +75,21 @@ class API:
         return str(self.response)
 
     def refresh(self):
+        """
+        Forcefully trigger the get request
+        :return:
+        """
         self.get(*self.command, **self.arguments)
         return self
 
     def get(self, *args, **kwargs):
+        """
+        Makes a get request
+
+        :param args:
+        :param kwargs:
+        :return:
+        """
         request = requests.get(
             API.url + "/".join(args),
             auth=API.auth,
@@ -86,6 +104,15 @@ class API:
         return response
 
     def post(self, *args, data: list = None, method: str = POST_METHOD_PARAMETERS, **kwargs):
+        """
+        Makes a post request using either json or data methodology
+
+        :param args:
+        :param data:
+        :param method:
+        :param kwargs:
+        :return:
+        """
         parameters = kwargs if method is API.POST_METHOD_PARAMETERS else {}
 
         body_type = "data" if method is API.POST_METHOD_DATA else "json" if type(data) is list else "data"
@@ -105,6 +132,13 @@ class API:
         return response
 
     def put(self, *args, **kwargs):
+        """
+        Makes a put request
+
+        :param args:
+        :param kwargs:
+        :return:
+        """
         request = requests.put(
             API.url + "/".join(args),
             data=json.dumps(kwargs),
@@ -117,6 +151,14 @@ class API:
         self.response = {}
 
     def delete(self, *args, **kwargs):
+        """
+        Makes a delete request
+
+        :param args:
+        :param kwargs:
+        :return:
+        """
+
         request = requests.delete(
             API.url + "/".join(args) + "?" + "&".join([key + "=" + value for key, value in kwargs.items()]),
             auth=API.auth
@@ -132,26 +174,6 @@ class API:
 
     def list(self) -> dict:
         raise NotImplemented
-
-    @staticmethod
-    def require_value(method: classmethod):
-        def magic(self):
-            if self.value is None or self.value is "":
-                raise ValueError
-
-            return method(self)
-
-        return magic
-
-    @staticmethod
-    def no_value(method: classmethod):
-        def magic(self):
-            if self.value not in [None, ""]:
-                raise ValueError
-
-            return method(self)
-
-        return magic
 
 
 class IllegalStringLengthException(BaseException):

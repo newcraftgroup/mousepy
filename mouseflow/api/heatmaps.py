@@ -3,6 +3,9 @@ from mouseflow.api import API
 
 class Heatmaps(API):
     def __init__(self, parent, uri: str = "", **kwargs):
+        if uri is None:
+            uri = ""
+
         super().__init__(["pagelist"], value=uri, parent=parent, **kwargs)
 
     def list(self, detailed=False):

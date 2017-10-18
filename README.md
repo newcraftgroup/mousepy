@@ -4,7 +4,7 @@
 
 ### Connection
 
-Before running any command, Mouseflow must first be initiated with a username and password.
+Before running any command, Mouseflow must first be initiated with a username a token generated within the Mouseflow site.
 
 #### Code
 
@@ -18,6 +18,7 @@ connection = Mouseflow(
 #### Parameters
 * ```user```: The username provided by mouseflow to connect to their API
 * ```token``` The token key provided by mouseflow to connect to their API
+* ```location``` Which server to connect to (Mouseflow.LOCATION_EUROPE, LOCATION_UNITED_STATES)
 * ```debug```: (optional) If set to True and when running in the terminal, all calls will be printed out
 
 

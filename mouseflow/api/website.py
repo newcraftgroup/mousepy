@@ -182,5 +182,5 @@ class Website(API):
 
         return Recordings(self, **kwargs)
 
-    def heatmaps(self) -> Heatmaps:
-        return Heatmaps(self)
+    def heatmaps(self, uri=None) -> Heatmaps:
+        return Heatmaps(self, uri)

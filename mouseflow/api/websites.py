@@ -4,6 +4,11 @@ from mouseflow.api.website import Website
 
 class Websites(API):
     def __init__(self, parent, **kwargs):
+        """
+        This is a test
+        :param parent:
+        :param kwargs:
+        """
         super().__init__("websites", parent=parent, **kwargs)
 
     def __str__(self):
