@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="nci-python-mouseflow",
-    version="0.0.5",
+    version="0.0.6",
     description="Client library for Mouseflow's API",
     url="https://github.com/conversioncompany/nci-python-mouseflow",
     author='Newcraft',
