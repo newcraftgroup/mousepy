@@ -19,5 +19,5 @@ setup(
     ],
     keywords='api mouseflow',
     packages=find_packages(exclude=['docs']),
-    install_requires=["pandas", "requests"],
+    install_requires=["requests"],
 )
