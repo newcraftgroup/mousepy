@@ -31,6 +31,9 @@ class Recordings(API):
     def list(self) -> dict:
         return {site["id"]: {**site} for site in self.response["recordings"]}
 
+    def bulktag(self, tag_name: str) -> BulkTag:
+        return BulkTag(self, tag_name)
+
     def variables(self, **kwargs):
         """
         :param kwargs:
