@@ -1,10 +1,8 @@
-import json
-
 from mouseflow.api import API
 
 
 class BulkTag(API):
-    """List all available tags or"""
+    """Allows for bulk listing, creation and removal of tags"""
 
     def __init__(self, parent: API, tag_name: str):
         super().__init__("bulktag", parent=parent, tag=tag_name)
@@ -15,7 +13,7 @@ class BulkTag(API):
     def add(self, to: list):
         """
         :param to: List of recording ids to add the tag to
-        :return:
+        :return: :class:`~mouseflow.api.recordings.bulktag.BulkTag`
         """
         self.post(*self.command, **self.arguments, data=to)
 
@@ -24,7 +22,7 @@ class BulkTag(API):
     def remove(self, ids: list):
         """
         :param ids: List of recording ids to remove the tag from
-        :return: 
+        :return: :class:`~mouseflow.api.recordings.bulktag.BulkTag`
         """
         self.delete(*self.command, **self.arguments, data=ids)
 

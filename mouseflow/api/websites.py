@@ -25,6 +25,10 @@ class Websites(API):
         }
 
     def website(self, site):
+        """
+        :param site: The name of the site to target
+        :return: :class:`~mouseflow.api.website.Website`
+        """
         if len(site) == 36 and "-" in site:
             return Website(self, site)
 

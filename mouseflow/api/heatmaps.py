@@ -1,3 +1,5 @@
+import typing
+
 from mouseflow.api import API
 
 
@@ -8,7 +10,7 @@ class Heatmaps(API):
 
         super().__init__(["pagelist"], value=uri, parent=parent, **kwargs)
 
-    def list(self, detailed=False):
+    def list(self, detailed=False) -> typing.Dict:
         """
         Lists all available pages along with their specs
         :return:
@@ -35,8 +37,8 @@ class Heatmaps(API):
             "displayUrl": page["displayUrl"]
         } for page in self.response["pages"]}
 
-    def page_list(self) -> list:
+    def page_list(self) -> typing.List:
         return Heatmaps(self.parent, "urls").response["urls"]
 
-    def details(self, uri):
+    def details(self, uri) -> "Heatmaps":
         return Heatmaps(self.parent, url=uri)

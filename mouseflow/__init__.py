@@ -8,12 +8,14 @@ from mouseflow.api.websites import Websites
 
 
 class Mouseflow(API):
+    """
+    Base class for connecting to the mouseflow API
+    """
     LOCATION_EUROPE = "eu"
     LOCATION_UNITED_STATES = "us"
 
     def __init__(self, user, token, location=LOCATION_EUROPE, debug=False, **kwargs):
         """
-        Base class for connecting to the mouseflow API
         :param user: The username used to connect to mouseflow
         :param token: The token used to connect to mouseflow (Generated on the Mouseflow website)
         :param location: Server location (Defaults to LOCATION_EUROPE)
@@ -37,7 +39,7 @@ class Mouseflow(API):
         Returns `mouseflow.api.recordings.Websites` unless the site parameter is provided in which case it returns `mouseflow.api.recordings.Website`.
 
         :param site: The name of the site to retrieve
-        :return: Website or Websites
+        :return: [:class:`~mouseflow.api.website.Website`, :class:`~mouseflow.api.websites.Websites`]
         """
         websites = Websites(self)
 

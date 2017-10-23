@@ -3,8 +3,8 @@ from typing import Union
 import mouseflow
 from mouseflow.api import API, IllegalStringLengthException
 from mouseflow.api.heatmaps import Heatmaps
+from mouseflow.api.recordings import Recordings
 from mouseflow.api.recordings.recording import Recording
-from mouseflow.api.recordings.recordings import Recordings
 
 
 class Website(API):
@@ -141,21 +141,21 @@ class Website(API):
                    meta: bool = False,
                    **kwargs) -> Union[Recordings, Recording]:
         """
-        Returns Recording if an id is provided otherwise returns Recordings
-        :param recording_id:
-        :param search:
-        :param from_date:
-        :param to_date:
-        :param country:
-        :param tags:
-        :param vars:
-        :param star:
-        :param limit:
+        Returns :class:`~mouseflow.api.recordings.recording.Recording` if an id is provided otherwise returns :class:`~mouseflow.api.recordings.Recordings`
+
+        :param recording_id: Recording ID filter
+        :param search: Text search filter
+        :param from_date: Start date filter
+        :param to_date: End date filter
+        :param country: country filter
+        :param tags: tag filter
+        :param vars: variable filter
+        :param star: star filter
+        :param limit: Maximum amount of values returned
         :param meta: Alias for limit = 0
         :param kwargs: Other potential filters as documented in https://api-docs.mouseflow.com/#filters
-        :return:
+        :return: :class:`~mouseflow.api.recordings.Recordings` or :class:`~mouseflow.api.recordings.recording.Recording`
         """
-
         if limit is not None:
             kwargs["limit"] = limit
         if limit is None and meta is True:
@@ -183,4 +183,8 @@ class Website(API):
         return Recordings(self, **kwargs)
 
     def heatmaps(self, uri=None) -> Heatmaps:
+        """
+        :param uri: Uri of the page to load the heatmaps from.
+        :return: :class:`~mouseflow.api.heatmaps.Heatmaps`
+        """
         return Heatmaps(self, uri)

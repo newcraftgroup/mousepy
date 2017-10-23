@@ -2,6 +2,9 @@ from mouseflow.api import API
 
 
 class Variables(API):
+    """
+    Listing and creation of recording variables
+    """
     def __init__(self, parent, **kwargs):
         super().__init__("variables", parent=parent)
 
@@ -25,6 +28,9 @@ class Variables(API):
         return "\n".join(variables)
 
     def create(self):
+        """
+        :return: :class:`~mouseflow.api.recordings.variables.Variables`
+        """
         if self.variables is None:
             return self
 
@@ -33,6 +39,9 @@ class Variables(API):
         return self
 
     def delete(self):
+        """
+        :return: :class:`~mouseflow.api.recordings.variables.Variables`
+        """
         if self.variables is None:
             return self
 

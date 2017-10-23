@@ -14,9 +14,17 @@ class Star(API):
         return "\n".join(self.parent.response["variables"])
 
     def run(self):
+        """
+        :return: :class:`~mouseflow.api.recordings.star.Star`
+        """
         self.post(*self.command, **self.arguments)
 
         return self
 
     def remove(self):
+        """
+        :return: :class:`~mouseflow.api.recordings.star.Star`
+        """
         self.delete(*self.command, **self.arguments)
+
+        return self

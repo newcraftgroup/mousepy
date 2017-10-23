@@ -1,18 +1,19 @@
+from mouseflow.api.recordings.properties.star import Star
+from mouseflow.api.recordings.properties.tag import Tag
+
 from mouseflow.api import API
-from mouseflow.api.recordings.star import Star
-from mouseflow.api.recordings.tag import Tag
-from mouseflow.api.recordings.variables import Variables
+from mouseflow.api.recordings.properties.variables import Variables
 
 
 class Recording(API):
+    """
+    Get a specific recording for the specified website.
+    """
+
     def __init__(self, parent, recording_id: str, **kwargs):
-        r"""Get the latest recordings in the specified website, with the most recent ones first.
-
-            GET /websites/{website-id}/recordings
-
-            :param parent: API object or Mouseflow
-            :param recording_id: Optional positional argument for list selection
-            :return:
+        """
+        :param parent: API object or Mouseflow
+        :param recording_id: ID for the selected recording
         """
         super().__init__(recording_id, parent=parent, **kwargs)
 
@@ -97,16 +98,29 @@ class Recording(API):
     def visitor_name(self):
         return self.response.get("visitorName")
 
-    def recording(self, recording_id):
-        return Recording(self, recording_id)
-
     def tag(self, tag_name: str = None):
+        """
+        Returns a tag object representing the current star status and allows to tag the specific recording.
+
+        :return: :class:`~mouseflow.api.recordings.properties.tag.Tag`
+        """
+
         return Tag(self, tag_name)
 
     def star(self):
+        """
+        Returns a star object representing the current star status and allows to star the specific recording.
+
+        :return: :class:`~mouseflow.api.recordings.properties.star.Star`
+        """
+
         return Star(self)
 
     def variables(self, **kwargs):
+        """
+        :param kwargs:
+        :return: :class:`~mouseflow.api.recordings.properties.variables.Variables`
+        """
         if kwargs is not None and self.value is not "":
             return Variables(self, **kwargs)
 
