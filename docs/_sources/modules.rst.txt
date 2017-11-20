@@ -1,0 +1,7 @@
+mouseflow
+=========
+
+.. toctree::
+   :maxdepth: 5
+
+   mouseflow

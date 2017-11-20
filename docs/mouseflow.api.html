@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Api package &mdash; Pythonflow 0.0.7 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Pythonflow 0.0.7 documentation" href="index.html"/>
+        <link rel="up" title="Mouseflow package" href="mouseflow.html"/>
+        <link rel="next" title="Recordings package" href="mouseflow.api.recordings.html"/>
+        <link rel="prev" title="Mouseflow package" href="mouseflow.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pythonflow
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="mouseflow.html">Mouseflow package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Api package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mouseflow.api.recordings.html">Recordings package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mouseflow.api.heatmaps">heatmaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mouseflow.api.website">website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mouseflow.api.websites">websites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mouseflow.html#module-mouseflow">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pythonflow</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="mouseflow.html">Mouseflow package</a> &raquo;</li>
+        
+      <li>Api package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mouseflow.api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-package">
+<h1>Api package<a class="headerlink" href="#api-package" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mouseflow.api.recordings.html">Recordings package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mouseflow.api.recordings.properties.html">Properties package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mouseflow.api.recordings.properties.html#module-mouseflow.api.recordings.properties.bulktag">bulktag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouseflow.api.recordings.properties.html#module-mouseflow.api.recordings.properties.star">star</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouseflow.api.recordings.properties.html#module-mouseflow.api.recordings.properties.tag">tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouseflow.api.recordings.properties.html#module-mouseflow.api.recordings.properties.tags">tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mouseflow.api.recordings.properties.html#module-mouseflow.api.recordings.properties.variables">variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mouseflow.api.recordings.html#module-mouseflow.api.recordings.recording">recording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mouseflow.api.recordings.html#module-mouseflow.api.recordings">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="module-mouseflow.api.heatmaps">
+<span id="heatmaps"></span><h2>heatmaps<a class="headerlink" href="#module-mouseflow.api.heatmaps" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mouseflow.api.heatmaps.Heatmaps">
+<em class="property">class </em><code class="descclassname">mouseflow.api.heatmaps.</code><code class="descname">Heatmaps</code><span class="sig-paren">(</span><em>parent</em>, <em>uri: str = ''</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.heatmaps.Heatmaps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mouseflow.api.API" title="mouseflow.api.API"><code class="xref py py-class docutils literal"><span class="pre">mouseflow.api.API</span></code></a></p>
+<dl class="method">
+<dt id="mouseflow.api.heatmaps.Heatmaps.details">
+<code class="descname">details</code><span class="sig-paren">(</span><em>uri</em><span class="sig-paren">)</span> &#x2192; mouseflow.api.heatmaps.Heatmaps<a class="headerlink" href="#mouseflow.api.heatmaps.Heatmaps.details" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.heatmaps.Heatmaps.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>detailed=False</em><span class="sig-paren">)</span> &#x2192; typing.Dict<a class="headerlink" href="#mouseflow.api.heatmaps.Heatmaps.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all available pages along with their specs
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.heatmaps.Heatmaps.page_list">
+<code class="descname">page_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; typing.List<a class="headerlink" href="#mouseflow.api.heatmaps.Heatmaps.page_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mouseflow.api.website">
+<span id="website"></span><h2>website<a class="headerlink" href="#module-mouseflow.api.website" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mouseflow.api.website.Website">
+<em class="property">class </em><code class="descclassname">mouseflow.api.website.</code><code class="descname">Website</code><span class="sig-paren">(</span><em>parent</em>, <em>site_name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.website.Website" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mouseflow.api.API" title="mouseflow.api.API"><code class="xref py py-class docutils literal"><span class="pre">mouseflow.api.API</span></code></a></p>
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.ALIGNMENT_CENTER">
+<code class="descname">ALIGNMENT_CENTER</code><em class="property"> = 'Center'</em><a class="headerlink" href="#mouseflow.api.website.Website.ALIGNMENT_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.ALIGNMENT_FLEXIBLE">
+<code class="descname">ALIGNMENT_FLEXIBLE</code><em class="property"> = 'Flexible'</em><a class="headerlink" href="#mouseflow.api.website.Website.ALIGNMENT_FLEXIBLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.ALIGNMENT_LEFT">
+<code class="descname">ALIGNMENT_LEFT</code><em class="property"> = 'Left'</em><a class="headerlink" href="#mouseflow.api.website.Website.ALIGNMENT_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.ALIGNMENT_RIGHT">
+<code class="descname">ALIGNMENT_RIGHT</code><em class="property"> = 'Right'</em><a class="headerlink" href="#mouseflow.api.website.Website.ALIGNMENT_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.STATUS_NOT_INSTALLED">
+<code class="descname">STATUS_NOT_INSTALLED</code><em class="property"> = 'NotInstalled'</em><a class="headerlink" href="#mouseflow.api.website.Website.STATUS_NOT_INSTALLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.STATUS_PAUSED">
+<code class="descname">STATUS_PAUSED</code><em class="property"> = 'Paused'</em><a class="headerlink" href="#mouseflow.api.website.Website.STATUS_PAUSED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.STATUS_RECORDING">
+<code class="descname">STATUS_RECORDING</code><em class="property"> = 'Recording'</em><a class="headerlink" href="#mouseflow.api.website.Website.STATUS_RECORDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.STATUS_STOPPED">
+<code class="descname">STATUS_STOPPED</code><em class="property"> = 'Stopped'</em><a class="headerlink" href="#mouseflow.api.website.Website.STATUS_STOPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.alignment">
+<code class="descname">alignment</code><a class="headerlink" href="#mouseflow.api.website.Website.alignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.anonymize_ips">
+<code class="descname">anonymize_ips</code><a class="headerlink" href="#mouseflow.api.website.Website.anonymize_ips" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.created">
+<code class="descname">created</code><a class="headerlink" href="#mouseflow.api.website.Website.created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.domains">
+<code class="descname">domains</code><a class="headerlink" href="#mouseflow.api.website.Website.domains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.encoding">
+<code class="descname">encoding</code><a class="headerlink" href="#mouseflow.api.website.Website.encoding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.excluded_ips">
+<code class="descname">excluded_ips</code><a class="headerlink" href="#mouseflow.api.website.Website.excluded_ips" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.website.Website.heatmaps">
+<code class="descname">heatmaps</code><span class="sig-paren">(</span><em>uri=None</em><span class="sig-paren">)</span> &#x2192; mouseflow.api.heatmaps.Heatmaps<a class="headerlink" href="#mouseflow.api.website.Website.heatmaps" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uri</strong> – Uri of the page to load the heatmaps from.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="#mouseflow.api.heatmaps.Heatmaps" title="mouseflow.api.heatmaps.Heatmaps"><code class="xref py py-class docutils literal"><span class="pre">Heatmaps</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.id">
+<code class="descname">id</code><a class="headerlink" href="#mouseflow.api.website.Website.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.merge_urls">
+<code class="descname">merge_urls</code><a class="headerlink" href="#mouseflow.api.website.Website.merge_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.name">
+<code class="descname">name</code><a class="headerlink" href="#mouseflow.api.website.Website.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.page_identifiers">
+<code class="descname">page_identifiers</code><a class="headerlink" href="#mouseflow.api.website.Website.page_identifiers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.read_only">
+<code class="descname">read_only</code><a class="headerlink" href="#mouseflow.api.website.Website.read_only" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.recording_rate">
+<code class="descname">recording_rate</code><a class="headerlink" href="#mouseflow.api.website.Website.recording_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.website.Website.recordings">
+<code class="descname">recordings</code><span class="sig-paren">(</span><em>recording_id: str = None</em>, <em>search: str = None</em>, <em>from_date=None</em>, <em>to_date=None</em>, <em>country: str = None</em>, <em>tags: list = None</em>, <em>vars: dict = None</em>, <em>star: bool = None</em>, <em>limit: int = None</em>, <em>meta: bool = False</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; typing.Union[mouseflow.api.recordings.Recordings, mouseflow.api.recordings.recording.Recording]<a class="headerlink" href="#mouseflow.api.website.Website.recordings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="mouseflow.api.recordings.html#mouseflow.api.recordings.recording.Recording" title="mouseflow.api.recordings.recording.Recording"><code class="xref py py-class docutils literal"><span class="pre">Recording</span></code></a> if an id is provided otherwise returns <a class="reference internal" href="mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings" title="mouseflow.api.recordings.Recordings"><code class="xref py py-class docutils literal"><span class="pre">Recordings</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>recording_id</strong> – Recording ID filter</li>
+<li><strong>search</strong> – Text search filter</li>
+<li><strong>from_date</strong> – Start date filter</li>
+<li><strong>to_date</strong> – End date filter</li>
+<li><strong>country</strong> – country filter</li>
+<li><strong>tags</strong> – tag filter</li>
+<li><strong>vars</strong> – variable filter</li>
+<li><strong>star</strong> – star filter</li>
+<li><strong>limit</strong> – Maximum amount of values returned</li>
+<li><strong>meta</strong> – Alias for limit = 0</li>
+<li><strong>kwargs</strong> – Other potential filters as documented in <a class="reference external" href="https://api-docs.mouseflow.com/#filters">https://api-docs.mouseflow.com/#filters</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><a class="reference internal" href="mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings" title="mouseflow.api.recordings.Recordings"><code class="xref py py-class docutils literal"><span class="pre">Recordings</span></code></a> or <a class="reference internal" href="mouseflow.api.recordings.html#mouseflow.api.recordings.recording.Recording" title="mouseflow.api.recordings.recording.Recording"><code class="xref py py-class docutils literal"><span class="pre">Recording</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.status">
+<code class="descname">status</code><a class="headerlink" href="#mouseflow.api.website.Website.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.website.Website.width">
+<code class="descname">width</code><a class="headerlink" href="#mouseflow.api.website.Website.width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mouseflow.api.websites">
+<span id="websites"></span><h2>websites<a class="headerlink" href="#module-mouseflow.api.websites" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mouseflow.api.websites.Websites">
+<em class="property">class </em><code class="descclassname">mouseflow.api.websites.</code><code class="descname">Websites</code><span class="sig-paren">(</span><em>parent</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.websites.Websites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mouseflow.api.API" title="mouseflow.api.API"><code class="xref py py-class docutils literal"><span class="pre">mouseflow.api.API</span></code></a></p>
+<dl class="method">
+<dt id="mouseflow.api.websites.Websites.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>id_as_key=False</em>, <em>list_of_objects=False</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#mouseflow.api.websites.Websites.list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.websites.Websites.website">
+<code class="descname">website</code><span class="sig-paren">(</span><em>site</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.websites.Websites.website" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>site</strong> – The name of the site to target</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="#mouseflow.api.website.Website" title="mouseflow.api.website.Website"><code class="xref py py-class docutils literal"><span class="pre">Website</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-mouseflow.api"></span><dl class="class">
+<dt id="mouseflow.api.API">
+<em class="property">class </em><code class="descclassname">mouseflow.api.</code><code class="descname">API</code><a class="headerlink" href="#mouseflow.api.API" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base API request handling class</p>
+<dl class="attribute">
+<dt id="mouseflow.api.API.POST_METHOD_DATA">
+<code class="descname">POST_METHOD_DATA</code><em class="property"> = 'data'</em><a class="headerlink" href="#mouseflow.api.API.POST_METHOD_DATA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.API.POST_METHOD_PARAMETERS">
+<code class="descname">POST_METHOD_PARAMETERS</code><em class="property"> = 'params'</em><a class="headerlink" href="#mouseflow.api.API.POST_METHOD_PARAMETERS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.API.auth">
+<code class="descname">auth</code><em class="property"> = ''</em><a class="headerlink" href="#mouseflow.api.API.auth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.API.debug">
+<code class="descname">debug</code><em class="property"> = False</em><a class="headerlink" href="#mouseflow.api.API.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.API.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a delete request</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – </li>
+<li><strong>kwargs</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.API.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a get request</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – </li>
+<li><strong>kwargs</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.list">
+<code class="descname">list</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#mouseflow.api.API.list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.post">
+<code class="descname">post</code><span class="sig-paren">(</span><em>*args</em>, <em>data: list = None</em>, <em>method: str = 'params'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.API.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a post request using either json or data methodology</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – </li>
+<li><strong>data</strong> – </li>
+<li><strong>method</strong> – </li>
+<li><strong>kwargs</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.API.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a put request</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – </li>
+<li><strong>kwargs</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.API.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forcefully trigger the get request
+:return:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.API.response">
+<code class="descname">response</code><a class="headerlink" href="#mouseflow.api.API.response" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mouseflow.api.API.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.API.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.API.url">
+<code class="descname">url</code><em class="property"> = ''</em><a class="headerlink" href="#mouseflow.api.API.url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="mouseflow.api.API.value">
+<code class="descname">value</code><a class="headerlink" href="#mouseflow.api.API.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="mouseflow.api.CannotCreateEmptyVariablesException">
+<em class="property">exception </em><code class="descclassname">mouseflow.api.</code><code class="descname">CannotCreateEmptyVariablesException</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.CannotCreateEmptyVariablesException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">BaseException</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="mouseflow.api.IllegalStringLengthException">
+<em class="property">exception </em><code class="descclassname">mouseflow.api.</code><code class="descname">IllegalStringLengthException</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.IllegalStringLengthException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">BaseException</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="mouseflow.api.PageNotFoundException">
+<em class="property">exception </em><code class="descclassname">mouseflow.api.</code><code class="descname">PageNotFoundException</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#mouseflow.api.PageNotFoundException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mouseflow.api.recordings.html" class="btn btn-neutral float-right" title="Recordings package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mouseflow.html" class="btn btn-neutral" title="Mouseflow package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Newcraft.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

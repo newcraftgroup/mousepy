@@ -1,0 +1,14 @@
+Mouseflow package
+=================
+
+.. toctree::
+
+    mouseflow.api
+
+Module contents
+---------------
+
+.. automodule:: mouseflow
+    :members:
+    :undoc-members:
+    :show-inheritance:

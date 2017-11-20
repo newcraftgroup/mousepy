@@ -9,7 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-build/
+docs-sphinx/build/
 develop-eggs/
 dist/
 downloads/
@@ -62,8 +62,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
-docs/
+docs-*/
 
 # PyBuilder
 target/
