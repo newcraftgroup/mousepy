@@ -1,0 +1,45 @@
+mouseflow\.api package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    mouseflow.api.recordings
+
+Submodules
+----------
+
+mouseflow\.api\.heatmaps module
+-------------------------------
+
+.. automodule:: mouseflow.api.heatmaps
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+mouseflow\.api\.website module
+------------------------------
+
+.. automodule:: mouseflow.api.website
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+mouseflow\.api\.websites module
+-------------------------------
+
+.. automodule:: mouseflow.api.websites
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: mouseflow.api
+    :members:
+    :undoc-members:
+    :show-inheritance:
