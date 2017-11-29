@@ -93,6 +93,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 </ul>
 
             
@@ -172,11 +173,38 @@
 <li class="toctree-l2"><a class="reference internal" href="release.html#planned-development">Planned development</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Pull requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#priorities">Priorities</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="example">
 <h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="listing-all-available-websites">
+<h2>Listing all available websites<a class="headerlink" href="#listing-all-available-websites" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">Mouseflow</span><span class="p">(</span>
+    <span class="n">user</span><span class="p">,</span>
+    <span class="n">token</span>
+<span class="p">)</span>
+
+<span class="n">list_of_websites</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">websites</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="selecting-a-specific-site">
+<h2>Selecting a specific site<a class="headerlink" href="#selecting-a-specific-site" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">Mouseflow</span><span class="p">(</span>
+    <span class="n">user</span><span class="p">,</span>
+    <span class="n">token</span>
+<span class="p">)</span>
+
+<span class="n">website</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">websites</span><span class="p">(</span><span class="s2">&quot;website name or id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="credits">
 <h1>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h1>

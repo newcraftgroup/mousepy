@@ -16,10 +16,34 @@ For more information regarding Mouseflow's RESTful's implementation and how to c
 
    modules
    release
+   contributing
 
 Example
 =======
 
+Listing all available websites
+------------------------------
+
+.. code-block:: python
+
+   connection = Mouseflow(
+       user,
+       token
+   )
+
+   list_of_websites = connection.websites().list()
+
+Selecting a specific site
+-------------------------
+
+.. code-block:: python
+
+   connection = Mouseflow(
+       user,
+       token
+   )
+
+   website = connection.websites("website name or id")
 
 
 Credits
