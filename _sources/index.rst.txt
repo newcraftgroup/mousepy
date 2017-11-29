@@ -21,7 +21,7 @@ For more information regarding Mouseflow's RESTful's implementation and how to c
 Example
 =======
 
-Listing all available websites
+List all available websites
 ------------------------------
 
 .. code-block:: python
@@ -33,7 +33,7 @@ Listing all available websites
 
    list_of_websites = connection.websites().list()
 
-Selecting a specific site
+Select a specific site
 -------------------------
 
 .. code-block:: python
@@ -44,7 +44,6 @@ Selecting a specific site
    )
 
    website = connection.websites("website name or id")
-
 
 Credits
 =======
