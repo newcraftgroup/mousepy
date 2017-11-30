@@ -48,9 +48,9 @@ Select a specific site
 Credits
 =======
 
-`Newcraft <https://www.newcraftgroup.com/>`_ empower companies to accelerate by using our craftsmanship. Our clients understand that new technology and new customer behavior create large-scale opportunities for growth. To compete with fast growing and agile disruptors, our clients are determined to capitalize their huge industry experience. Newcraft help them grow faster with acceleration consultancy, digital marketing and data science.
+`NEWCRAFT <https://www.newcraftgroup.com/>`_ empower companies to accelerate by using our craftsmanship. Our clients understand that new technology and new customer behavior create large-scale opportunities for growth. To compete with fast growing and agile disruptors, our clients are determined to capitalize their huge industry experience. NEWCRAFT help them grow faster with acceleration consultancy, digital marketing and data science.
 
-In releasing this client API to the public, Newcraft hopes to facilitate the Python community's work when implementing Mouseflow within their developement stack.
+In releasing this client API to the public, NEWCRAFT hopes to facilitate the Python community's work when implementing Mouseflow within their developement stack.
 
 Our data science team helps you in the process of structuring databases, connecting APIs, and managing your digital management platform in order to unlock actionable insights. Other areas of expertise are product trend discovery, machine learning, IoT, and predictive analytics.
 
