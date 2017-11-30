@@ -1,4 +1,4 @@
-mouseflow package
+mousepy package
 =================
 
 Subpackages
