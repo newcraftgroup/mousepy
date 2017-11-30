@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mouseflow.api.website &mdash; mousepy 0.0.8 alpha documentation</title>
+  <title>mousepy.api.website &mdash; mousepy 0.0.8 alpha documentation</title>
   
 
   
@@ -36,7 +36,7 @@
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="mousepy 0.0.8 alpha documentation" href="../../../index.html"/>
-        <link rel="up" title="mouseflow.api" href="../api.html"/> 
+        <link rel="up" title="mousepy.api" href="../api.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -140,11 +140,11 @@
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
-          <li><a href="../../mouseflow.html">mouseflow</a> &raquo;</li>
+          <li><a href="../../mousepy.html">mousepy</a> &raquo;</li>
         
-          <li><a href="../api.html">mouseflow.api</a> &raquo;</li>
+          <li><a href="../api.html">mousepy.api</a> &raquo;</li>
         
-      <li>mouseflow.api.website</li>
+      <li>mousepy.api.website</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,33 +161,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for mouseflow.api.website</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright 2017 NEWCRAFT GROUP B.V.</span>
-
-<span class="sd">   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="sd">   you may not use this file except in compliance with the License.</span>
-<span class="sd">   You may obtain a copy of the License at</span>
-
-<span class="sd">       http://www.apache.org/licenses/LICENSE-2.0</span>
-
-<span class="sd">   Unless required by applicable law or agreed to in writing, software</span>
-<span class="sd">   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="sd">   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="sd">   See the License for the specific language governing permissions and</span>
-<span class="sd">   limitations under the License.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+  <h1>Source code for mousepy.api.website</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2017 NEWCRAFT GROUP B.V.</span>
+<span class="c1">#</span>
+<span class="c1">#   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1">#   you may not use this file except in compliance with the License.</span>
+<span class="c1">#   You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#       http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#   Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#   See the License for the specific language governing permissions and</span>
+<span class="c1">#   limitations under the License.</span>
 
 <span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Union</span>
 
-<span class="kn">import</span> <span class="nn">mouseflow</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api</span> <span class="k">import</span> <span class="n">API</span><span class="p">,</span> <span class="n">IllegalStringLengthException</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.heatmaps</span> <span class="k">import</span> <span class="n">Heatmaps</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.recordings</span> <span class="k">import</span> <span class="n">Recordings</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.recordings.recording</span> <span class="k">import</span> <span class="n">Recording</span>
+<span class="kn">import</span> <span class="nn">mousepy</span>
+<span class="kn">from</span> <span class="nn">mousepy.api</span> <span class="k">import</span> <span class="n">API</span><span class="p">,</span> <span class="n">IllegalStringLengthException</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.heatmaps</span> <span class="k">import</span> <span class="n">Heatmaps</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.recordings</span> <span class="k">import</span> <span class="n">Recordings</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.recordings.recording</span> <span class="k">import</span> <span class="n">Recording</span>
 
 
-<div class="viewcode-block" id="Website"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.website.Website">[docs]</a><span class="k">class</span> <span class="nc">Website</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
+<div class="viewcode-block" id="Website"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.website.Website">[docs]</a><span class="k">class</span> <span class="nc">Website</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
     <span class="n">ALIGNMENT_CENTER</span> <span class="o">=</span> <span class="s2">&quot;Center&quot;</span>
     <span class="n">ALIGNMENT_LEFT</span> <span class="o">=</span> <span class="s2">&quot;Left&quot;</span>
     <span class="n">ALIGNMENT_RIGHT</span> <span class="o">=</span> <span class="s2">&quot;Right&quot;</span>
@@ -200,9 +198,6 @@
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">site_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">site_name</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">mouseflow</span><span class="o">.</span><span class="n">Mouseflow</span><span class="o">.</span><span class="n">debug</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_only</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! WARNING: ACCESSING READ ONLY WEBSITE !!!&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="p">)</span>
@@ -243,7 +238,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">read_only</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="c1"># Avoid having to make a new API call if not necessary</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="n">mouseflow</span><span class="o">.</span><span class="n">Websites</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">init</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="n">mousepy</span><span class="o">.</span><span class="n">Websites</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">init</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="kc">True</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]][</span><span class="s2">&quot;readOnly&quot;</span><span class="p">]</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;readOnly&quot;</span><span class="p">)</span>
@@ -308,7 +303,7 @@
     <span class="k">def</span> <span class="nf">merge_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mergeUrls&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Website.recordings"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.website.Website.recordings">[docs]</a>    <span class="k">def</span> <span class="nf">recordings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+<div class="viewcode-block" id="Website.recordings"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.website.Website.recordings">[docs]</a>    <span class="k">def</span> <span class="nf">recordings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                    <span class="n">recording_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">search</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">from_date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -321,7 +316,7 @@
                    <span class="n">meta</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                    <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Recordings</span><span class="p">,</span> <span class="n">Recording</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns :class:`~mouseflow.api.recordings.recording.Recording` if an id is provided otherwise returns :class:`~mouseflow.api.recordings.Recordings`</span>
+<span class="sd">        Returns :class:`~mousepy.api.recordings.recording.Recording` if an id is provided otherwise returns :class:`~mousepy.api.recordings.Recordings`</span>
 
 <span class="sd">        :param recording_id: Recording ID filter</span>
 <span class="sd">        :param search: Text search filter</span>
@@ -334,7 +329,7 @@
 <span class="sd">        :param limit: Maximum amount of values returned</span>
 <span class="sd">        :param meta: Alias for limit = 0</span>
 <span class="sd">        :param kwargs: Other potential filters as documented in https://api-docs.mouseflow.com/#filters</span>
-<span class="sd">        :return: :class:`~mouseflow.api.recordings.Recordings` or :class:`~mouseflow.api.recordings.recording.Recording`</span>
+<span class="sd">        :return: :class:`~mousepy.api.recordings.Recordings` or :class:`~mousepy.api.recordings.recording.Recording`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;limit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">limit</span>
@@ -362,10 +357,10 @@
 
         <span class="k">return</span> <span class="n">Recordings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Website.heatmaps"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.website.Website.heatmaps">[docs]</a>    <span class="k">def</span> <span class="nf">heatmaps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Heatmaps</span><span class="p">:</span>
+<div class="viewcode-block" id="Website.heatmaps"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.website.Website.heatmaps">[docs]</a>    <span class="k">def</span> <span class="nf">heatmaps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Heatmaps</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param uri: Uri of the page to load the heatmaps from.</span>
-<span class="sd">        :return: :class:`~mouseflow.api.heatmaps.Heatmaps`</span>
+<span class="sd">        :return: :class:`~mousepy.api.heatmaps.Heatmaps`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Heatmaps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">)</span></div></div>
 </pre></div>

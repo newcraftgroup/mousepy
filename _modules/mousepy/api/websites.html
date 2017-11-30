@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mouseflow.api.websites &mdash; mousepy 0.0.8 alpha documentation</title>
+  <title>mousepy.api.websites &mdash; mousepy 0.0.8 alpha documentation</title>
   
 
   
@@ -36,7 +36,7 @@
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="mousepy 0.0.8 alpha documentation" href="../../../index.html"/>
-        <link rel="up" title="mouseflow.api" href="../api.html"/> 
+        <link rel="up" title="mousepy.api" href="../api.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -140,11 +140,11 @@
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
-          <li><a href="../../mouseflow.html">mouseflow</a> &raquo;</li>
+          <li><a href="../../mousepy.html">mousepy</a> &raquo;</li>
         
-          <li><a href="../api.html">mouseflow.api</a> &raquo;</li>
+          <li><a href="../api.html">mousepy.api</a> &raquo;</li>
         
-      <li>mouseflow.api.websites</li>
+      <li>mousepy.api.websites</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,28 +161,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for mouseflow.api.websites</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright 2017 NEWCRAFT GROUP B.V.</span>
+  <h1>Source code for mousepy.api.websites</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2017 NEWCRAFT GROUP B.V.</span>
+<span class="c1">#</span>
+<span class="c1">#   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1">#   you may not use this file except in compliance with the License.</span>
+<span class="c1">#   You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#       http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#   Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#   See the License for the specific language governing permissions and</span>
+<span class="c1">#   limitations under the License.</span>
 
-<span class="sd">   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="sd">   you may not use this file except in compliance with the License.</span>
-<span class="sd">   You may obtain a copy of the License at</span>
-
-<span class="sd">       http://www.apache.org/licenses/LICENSE-2.0</span>
-
-<span class="sd">   Unless required by applicable law or agreed to in writing, software</span>
-<span class="sd">   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="sd">   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="sd">   See the License for the specific language governing permissions and</span>
-<span class="sd">   limitations under the License.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="kn">from</span> <span class="nn">mouseflow.api</span> <span class="k">import</span> <span class="n">API</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.website</span> <span class="k">import</span> <span class="n">Website</span>
+<span class="kn">from</span> <span class="nn">mousepy.api</span> <span class="k">import</span> <span class="n">API</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.website</span> <span class="k">import</span> <span class="n">Website</span>
 
 
-<div class="viewcode-block" id="Websites"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.websites.Websites">[docs]</a><span class="k">class</span> <span class="nc">Websites</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
+<div class="viewcode-block" id="Websites"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.websites.Websites">[docs]</a><span class="k">class</span> <span class="nc">Websites</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is a test</span>
@@ -194,7 +192,7 @@
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Websites.list"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.websites.Websites.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_as_key</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">list_of_objects</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<div class="viewcode-block" id="Websites.list"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.websites.Websites.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_as_key</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">list_of_objects</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="n">site</span><span class="p">[</span><span class="s2">&quot;id&quot;</span> <span class="k">if</span> <span class="n">id_as_key</span> <span class="k">else</span> <span class="s2">&quot;name&quot;</span><span class="p">]:</span> <span class="p">{</span>
                 <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">site</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
@@ -204,10 +202,10 @@
             <span class="p">}</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">list_of_objects</span> <span class="k">else</span> <span class="n">Website</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span>
         <span class="p">}</span></div>
 
-<div class="viewcode-block" id="Websites.website"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.websites.Websites.website">[docs]</a>    <span class="k">def</span> <span class="nf">website</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">):</span>
+<div class="viewcode-block" id="Websites.website"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.websites.Websites.website">[docs]</a>    <span class="k">def</span> <span class="nf">website</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param site: The name of the site to target</span>
-<span class="sd">        :return: :class:`~mouseflow.api.website.Website`</span>
+<span class="sd">        :return: :class:`~mousepy.api.website.Website`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">site</span><span class="p">)</span> <span class="o">==</span> <span class="mi">36</span> <span class="ow">and</span> <span class="s2">&quot;-&quot;</span> <span class="ow">in</span> <span class="n">site</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">Website</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">site</span><span class="p">)</span>

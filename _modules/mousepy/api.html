@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mouseflow.api &mdash; mousepy 0.0.8 alpha documentation</title>
+  <title>mousepy.api &mdash; mousepy 0.0.8 alpha documentation</title>
   
 
   
@@ -36,7 +36,7 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="mousepy 0.0.8 alpha documentation" href="../../index.html"/>
-        <link rel="up" title="mouseflow" href="../mouseflow.html"/> 
+        <link rel="up" title="mousepy" href="../mousepy.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -140,9 +140,9 @@
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
-          <li><a href="../mouseflow.html">mouseflow</a> &raquo;</li>
+          <li><a href="../mousepy.html">mousepy</a> &raquo;</li>
         
-      <li>mouseflow.api</li>
+      <li>mousepy.api</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,22 +159,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for mouseflow.api</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright 2017 NEWCRAFT GROUP B.V.</span>
-
-<span class="sd">   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="sd">   you may not use this file except in compliance with the License.</span>
-<span class="sd">   You may obtain a copy of the License at</span>
-
-<span class="sd">       http://www.apache.org/licenses/LICENSE-2.0</span>
-
-<span class="sd">   Unless required by applicable law or agreed to in writing, software</span>
-<span class="sd">   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="sd">   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="sd">   See the License for the specific language governing permissions and</span>
-<span class="sd">   limitations under the License.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+  <h1>Source code for mousepy.api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2017 NEWCRAFT GROUP B.V.</span>
+<span class="c1">#</span>
+<span class="c1">#   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1">#   you may not use this file except in compliance with the License.</span>
+<span class="c1">#   You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#       http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#   Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#   See the License for the specific language governing permissions and</span>
+<span class="c1">#   limitations under the License.</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
@@ -183,7 +181,7 @@
 <span class="kn">import</span> <span class="nn">requests</span>
 
 
-<div class="viewcode-block" id="API"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API">[docs]</a><span class="k">class</span> <span class="nc">API</span><span class="p">:</span>
+<div class="viewcode-block" id="API"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API">[docs]</a><span class="k">class</span> <span class="nc">API</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; Base API request handling class &quot;&quot;&quot;</span>
 
     <span class="n">POST_METHOD_DATA</span> <span class="o">=</span> <span class="s2">&quot;data&quot;</span>
@@ -252,7 +250,7 @@
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="p">)</span>
 
-<div class="viewcode-block" id="API.refresh"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.refresh">[docs]</a>    <span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="API.refresh"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.refresh">[docs]</a>    <span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Forcefully trigger the get request</span>
 <span class="sd">        :return:</span>
@@ -260,7 +258,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span></div>
 
-<div class="viewcode-block" id="API.get"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="API.get"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Makes a get request</span>
 
@@ -281,7 +279,7 @@
 
         <span class="k">return</span> <span class="n">response</span></div>
 
-<div class="viewcode-block" id="API.post"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.post">[docs]</a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">POST_METHOD_PARAMETERS</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="API.post"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.post">[docs]</a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">POST_METHOD_PARAMETERS</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Makes a post request using either json or data methodology</span>
 
@@ -309,7 +307,7 @@
 
         <span class="k">return</span> <span class="n">response</span></div>
 
-<div class="viewcode-block" id="API.put"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.put">[docs]</a>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="API.put"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.put">[docs]</a>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Makes a put request</span>
 
@@ -328,7 +326,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="p">{}</span></div>
 
-<div class="viewcode-block" id="API.delete"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="API.delete"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Makes a delete request</span>
 
@@ -347,16 +345,14 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="p">{}</span></div>
 
-<div class="viewcode-block" id="API.send"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.send">[docs]</a>    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="API.send"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.send">[docs]</a>    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="API.list"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.API.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<div class="viewcode-block" id="API.list"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.API.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="k">raise</span> <span class="bp">NotImplemented</span></div></div>
 
 
-<div class="viewcode-block" id="IllegalStringLengthException"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.IllegalStringLengthException">[docs]</a><span class="k">class</span> <span class="nc">IllegalStringLengthException</span><span class="p">(</span><span class="ne">BaseException</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Common base class for all non-exit exceptions. &quot;&quot;&quot;</span>
-
+<div class="viewcode-block" id="IllegalStringLengthException"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.IllegalStringLengthException">[docs]</a><span class="k">class</span> <span class="nc">IllegalStringLengthException</span><span class="p">(</span><span class="ne">BaseException</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># real signature unknown</span>
         <span class="k">pass</span>
 
@@ -366,9 +362,7 @@
         <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="CannotCreateEmptyVariablesException"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.CannotCreateEmptyVariablesException">[docs]</a><span class="k">class</span> <span class="nc">CannotCreateEmptyVariablesException</span><span class="p">(</span><span class="ne">BaseException</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Common base class for all non-exit exceptions. &quot;&quot;&quot;</span>
-
+<div class="viewcode-block" id="CannotCreateEmptyVariablesException"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.CannotCreateEmptyVariablesException">[docs]</a><span class="k">class</span> <span class="nc">CannotCreateEmptyVariablesException</span><span class="p">(</span><span class="ne">BaseException</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># real signature unknown</span>
         <span class="k">pass</span>
 
@@ -378,9 +372,7 @@
         <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="PageNotFoundException"><a class="viewcode-back" href="../../mouseflow.api.html#mouseflow.api.PageNotFoundException">[docs]</a><span class="k">class</span> <span class="nc">PageNotFoundException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Common base class for all non-exit exceptions. &quot;&quot;&quot;</span>
-
+<div class="viewcode-block" id="PageNotFoundException"><a class="viewcode-back" href="../../mousepy.api.html#mousepy.api.PageNotFoundException">[docs]</a><span class="k">class</span> <span class="nc">PageNotFoundException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># real signature unknown</span>
         <span class="k">pass</span>
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mouseflow.api.heatmaps &mdash; mousepy 0.0.8 alpha documentation</title>
+  <title>mousepy.api.heatmaps &mdash; mousepy 0.0.8 alpha documentation</title>
   
 
   
@@ -36,7 +36,7 @@
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="mousepy 0.0.8 alpha documentation" href="../../../index.html"/>
-        <link rel="up" title="mouseflow.api" href="../api.html"/> 
+        <link rel="up" title="mousepy.api" href="../api.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -140,11 +140,11 @@
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
-          <li><a href="../../mouseflow.html">mouseflow</a> &raquo;</li>
+          <li><a href="../../mousepy.html">mousepy</a> &raquo;</li>
         
-          <li><a href="../api.html">mouseflow.api</a> &raquo;</li>
+          <li><a href="../api.html">mousepy.api</a> &raquo;</li>
         
-      <li>mouseflow.api.heatmaps</li>
+      <li>mousepy.api.heatmaps</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,36 +161,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for mouseflow.api.heatmaps</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright 2017 NEWCRAFT GROUP B.V.</span>
-
-<span class="sd">   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="sd">   you may not use this file except in compliance with the License.</span>
-<span class="sd">   You may obtain a copy of the License at</span>
-
-<span class="sd">       http://www.apache.org/licenses/LICENSE-2.0</span>
-
-<span class="sd">   Unless required by applicable law or agreed to in writing, software</span>
-<span class="sd">   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="sd">   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="sd">   See the License for the specific language governing permissions and</span>
-<span class="sd">   limitations under the License.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+  <h1>Source code for mousepy.api.heatmaps</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2017 NEWCRAFT GROUP B.V.</span>
+<span class="c1">#</span>
+<span class="c1">#   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1">#   you may not use this file except in compliance with the License.</span>
+<span class="c1">#   You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#       http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#   Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#   See the License for the specific language governing permissions and</span>
+<span class="c1">#   limitations under the License.</span>
 
 <span class="kn">import</span> <span class="nn">typing</span>
 
-<span class="kn">from</span> <span class="nn">mouseflow.api</span> <span class="k">import</span> <span class="n">API</span>
+<span class="kn">from</span> <span class="nn">mousepy.api</span> <span class="k">import</span> <span class="n">API</span>
 
 
-<div class="viewcode-block" id="Heatmaps"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.heatmaps.Heatmaps">[docs]</a><span class="k">class</span> <span class="nc">Heatmaps</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
+<div class="viewcode-block" id="Heatmaps"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.heatmaps.Heatmaps">[docs]</a><span class="k">class</span> <span class="nc">Heatmaps</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">uri</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">uri</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">uri</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">([</span><span class="s2">&quot;pagelist&quot;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="n">uri</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Heatmaps.list"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.heatmaps.Heatmaps.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">:</span>
+<div class="viewcode-block" id="Heatmaps.list"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.heatmaps.Heatmaps.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Lists all available pages along with their specs</span>
 <span class="sd">        :return:</span>
@@ -217,10 +215,10 @@
             <span class="s2">&quot;displayUrl&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">[</span><span class="s2">&quot;displayUrl&quot;</span><span class="p">]</span>
         <span class="p">}</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;pages&quot;</span><span class="p">]}</span></div>
 
-<div class="viewcode-block" id="Heatmaps.page_list"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.heatmaps.Heatmaps.page_list">[docs]</a>    <span class="k">def</span> <span class="nf">page_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">:</span>
+<div class="viewcode-block" id="Heatmaps.page_list"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.heatmaps.Heatmaps.page_list">[docs]</a>    <span class="k">def</span> <span class="nf">page_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">Heatmaps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;urls&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;urls&quot;</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="Heatmaps.details"><a class="viewcode-back" href="../../../mouseflow.api.html#mouseflow.api.heatmaps.Heatmaps.details">[docs]</a>    <span class="k">def</span> <span class="nf">details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Heatmaps&quot;</span><span class="p">:</span>
+<div class="viewcode-block" id="Heatmaps.details"><a class="viewcode-back" href="../../../mousepy.api.html#mousepy.api.heatmaps.Heatmaps.details">[docs]</a>    <span class="k">def</span> <span class="nf">details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Heatmaps&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">Heatmaps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">uri</span><span class="p">)</span></div></div>
 </pre></div>
 

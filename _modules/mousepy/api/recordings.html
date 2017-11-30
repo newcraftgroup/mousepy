@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mouseflow.api.recordings &mdash; mousepy 0.0.8 alpha documentation</title>
+  <title>mousepy.api.recordings &mdash; mousepy 0.0.8 alpha documentation</title>
   
 
   
@@ -36,7 +36,7 @@
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
     <link rel="top" title="mousepy 0.0.8 alpha documentation" href="../../../index.html"/>
-        <link rel="up" title="mouseflow.api" href="../api.html"/> 
+        <link rel="up" title="mousepy.api" href="../api.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -140,11 +140,11 @@
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
-          <li><a href="../../mouseflow.html">mouseflow</a> &raquo;</li>
+          <li><a href="../../mousepy.html">mousepy</a> &raquo;</li>
         
-          <li><a href="../api.html">mouseflow.api</a> &raquo;</li>
+          <li><a href="../api.html">mousepy.api</a> &raquo;</li>
         
-      <li>mouseflow.api.recordings</li>
+      <li>mousepy.api.recordings</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,32 +161,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for mouseflow.api.recordings</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright 2017 NEWCRAFT GROUP B.V.</span>
+  <h1>Source code for mousepy.api.recordings</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2017 NEWCRAFT GROUP B.V.</span>
+<span class="c1">#</span>
+<span class="c1">#   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1">#   you may not use this file except in compliance with the License.</span>
+<span class="c1">#   You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#       http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#   Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#   See the License for the specific language governing permissions and</span>
+<span class="c1">#   limitations under the License.</span>
 
-<span class="sd">   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<span class="sd">   you may not use this file except in compliance with the License.</span>
-<span class="sd">   You may obtain a copy of the License at</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.recordings.properties.bulktag</span> <span class="k">import</span> <span class="n">BulkTag</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.recordings.properties.tags</span> <span class="k">import</span> <span class="n">Tags</span>
 
-<span class="sd">       http://www.apache.org/licenses/LICENSE-2.0</span>
-
-<span class="sd">   Unless required by applicable law or agreed to in writing, software</span>
-<span class="sd">   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<span class="sd">   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<span class="sd">   See the License for the specific language governing permissions and</span>
-<span class="sd">   limitations under the License.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="kn">from</span> <span class="nn">mouseflow.api.recordings.properties.bulktag</span> <span class="k">import</span> <span class="n">BulkTag</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.recordings.properties.tags</span> <span class="k">import</span> <span class="n">Tags</span>
-
-<span class="kn">from</span> <span class="nn">mouseflow.api</span> <span class="k">import</span> <span class="n">API</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.recordings.properties.variables</span> <span class="k">import</span> <span class="n">Variables</span>
-<span class="kn">from</span> <span class="nn">mouseflow.api.recordings.recording</span> <span class="k">import</span> <span class="n">Recording</span>
+<span class="kn">from</span> <span class="nn">mousepy.api</span> <span class="k">import</span> <span class="n">API</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.recordings.properties.variables</span> <span class="k">import</span> <span class="n">Variables</span>
+<span class="kn">from</span> <span class="nn">mousepy.api.recordings.recording</span> <span class="k">import</span> <span class="n">Recording</span>
 
 
-<div class="viewcode-block" id="Recordings"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings">[docs]</a><span class="k">class</span> <span class="nc">Recordings</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
+<div class="viewcode-block" id="Recordings"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings">[docs]</a><span class="k">class</span> <span class="nc">Recordings</span><span class="p">(</span><span class="n">API</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get the latest recordings in the specified website, with the most recent ones first.</span>
 
@@ -196,28 +194,28 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;recordings&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Recordings.count"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.count">[docs]</a>    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Recordings.count"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.count">[docs]</a>    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Recordings.tags"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.tags">[docs]</a>    <span class="k">def</span> <span class="nf">tags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Recordings.tags"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.tags">[docs]</a>    <span class="k">def</span> <span class="nf">tags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Tags</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Recordings.recording"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.recording">[docs]</a>    <span class="k">def</span> <span class="nf">recording</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="Recordings.recording"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.recording">[docs]</a>    <span class="k">def</span> <span class="nf">recording</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Recording</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Recordings.ids"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.ids">[docs]</a>    <span class="k">def</span> <span class="nf">ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Recordings.ids"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.ids">[docs]</a>    <span class="k">def</span> <span class="nf">ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">site</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;recordings&quot;</span><span class="p">]]</span></div>
 
-<div class="viewcode-block" id="Recordings.list"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<div class="viewcode-block" id="Recordings.list"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">{</span><span class="n">site</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]:</span> <span class="p">{</span><span class="o">**</span><span class="n">site</span><span class="p">}</span> <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;recordings&quot;</span><span class="p">]}</span></div>
 
-<div class="viewcode-block" id="Recordings.bulktag"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.bulktag">[docs]</a>    <span class="k">def</span> <span class="nf">bulktag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BulkTag</span><span class="p">:</span>
+<div class="viewcode-block" id="Recordings.bulktag"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.bulktag">[docs]</a>    <span class="k">def</span> <span class="nf">bulktag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BulkTag</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">BulkTag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Recordings.variables"><a class="viewcode-back" href="../../../mouseflow.api.recordings.html#mouseflow.api.recordings.Recordings.variables">[docs]</a>    <span class="k">def</span> <span class="nf">variables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Recordings.variables"><a class="viewcode-back" href="../../../mousepy.api.recordings.html#mousepy.api.recordings.Recordings.variables">[docs]</a>    <span class="k">def</span> <span class="nf">variables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param kwargs:</span>
-<span class="sd">        :return: :class:`~mouseflow.api.recordings.properties.variables.Variables`</span>
+<span class="sd">        :return: :class:`~mousepy.api.recordings.properties.variables.Variables`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">kwargs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">Variables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
