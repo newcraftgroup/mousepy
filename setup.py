@@ -33,7 +33,8 @@ setup(
     author_email='admin.tech@newcraftgroup.com',
     license='Apache 2.0',
     classifiers=classifiers,
-    keywords='api wrapper mouseflow analytics data',
+    keywords=['api', 'wrapper', 'mouseflow', 'analytics', 'data'],
+    download_url='https://github.com/newcraftgroup/mousepy/archive/v0.0.9.tar.gz',
     packages=find_packages(exclude=['docs']),
     install_requires=["requests"],
 )
