@@ -52,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'mousepy'
-copyright = '2017, Newcraft'
-author = 'Newcraft'
+copyright = '2017, NEWCRAFT GROUP B.V.'
+author = 'NEWCRAFT GROUP B.V.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
