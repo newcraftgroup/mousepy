@@ -28,6 +28,7 @@ setup(
     name="mousepy",
     version="0.0.9",
     description="A wrapper for the Mouseflow API.",
+    long_description=open('README.md').read(),
     url="https://github.com/newcraftgroup/mousepy",
     author='NEWCRAFT',
     author_email='admin.tech@newcraftgroup.com',
