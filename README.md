@@ -25,4 +25,6 @@ connection = Mouseflow(
     user,
     token
 )
+
+list_of_websites = connection.websites().list()
 ```
